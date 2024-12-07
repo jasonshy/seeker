@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#preview-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: none;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
