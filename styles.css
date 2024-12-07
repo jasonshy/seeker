@@ -6,26 +6,28 @@ body {
   background-color: #f4f4f4;
 }
 
-h1 {
-  margin-bottom: 20px;
+#scanner-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
 }
 
-button {
+#barcode-result {
+  margin-top: 20px;
+  font-size: 24px;
+  color: green;
+}
+
+#start-camera-btn {
+  margin-bottom: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  margin-bottom: 20px;
 }
 
-#preview-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-img {
-  max-width: 100%;
+video {
+  width: 100%;
   height: auto;
-  display: none;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  display: block;
 }
