@@ -3,39 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML5 Camera Access</title>
+  <title>Barcode Scanner</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Activate Your Camera</h1>
-  <button id="capture-btn">Capture Photo</button>
-  
-  <input type="file" accept="image/*" capture="environment" id="camera-input" style="display: none;">
-  
-  <div id="preview-container">
-    <img id="preview" src="" alt="Preview">
+  <h1>Scan a Barcode</h1>
+
+  <button id="start-camera-btn">Activate Camera</button>
+
+  <div id="scanner-container">
+    <video id="video" autoplay></video>
   </div>
-  
-  <script>
-    const captureButton = document.getElementById('capture-btn');
-    const cameraInput = document.getElementById('camera-input');
-    const preview = document.getElementById('preview');
 
-    captureButton.addEventListener('click', () => {
-      cameraInput.click();
-    });
+  <p id="barcode-result"></p>
 
-    cameraInput.addEventListener('change', (event) => {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          preview.src = e.target.result;
-          preview.style.display = 'block';
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <script src="script.js"></script>
 </body>
 </html>
