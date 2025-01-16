@@ -21,9 +21,13 @@ body {
 }
 
 #start-camera-btn {
-  margin-bottom: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 16px;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 video {
