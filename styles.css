@@ -60,6 +60,7 @@ video {
   justify-content: flex-start; /* Align links to the left */
   gap: 20px; /* Space between the links */
   margin: 10px 20px; /* Add padding around the navbar */
+  padding-bottom: 1.5px; /* Optional: Add slight padding if you want some spacing */
 }
 
 .nav-link {
