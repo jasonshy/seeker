@@ -16,13 +16,17 @@
   </nav>
   <div class="separator-line"></div>
 
+  <!-- Camera window before activation -->
+  <div id="camera-window">
+    <p>Click to Activate Camera</p>
+    <video id="video" autoplay></video> <!-- Video element inside the camera window -->
+  </div>
+
   <button id="start-camera-btn">Activate Camera</button>
 
   <div id="scanner-container">
-    <video id="video" autoplay></video>
+    <p id="barcode-result"></p>
   </div>
-
-  <p id="barcode-result"></p>
 
   <script src="https://unpkg.com/@zxing/library@latest"></script>
   <script src="script.js"></script>
