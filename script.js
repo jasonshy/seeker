@@ -5,6 +5,9 @@ const codeReader = new ZXing.BrowserBarcodeReader();
 
 startCameraButton.addEventListener('click', async () => {
   try {
+    // Hide the camera window when the camera is activated
+    document.getElementById('camera-window').style.display = 'none';
+    
     const stream = await navigator.mediaDevices.getUserMedia({
       video: { facingMode: 'environment' },
     });
@@ -55,4 +58,7 @@ function stopCamera(stream) {
   video.srcObject = null;
   video.style.display = 'none'; // Hide the video once detection is done
   startCameraButton.style.display = 'block'; // Show the start button again
+
+  // Show the camera window again
+  document.getElementById('camera-window').style.display = 'flex';
 }
