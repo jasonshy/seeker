@@ -39,7 +39,7 @@ h1 {
 #camera-window {
   width: 100%;
   max-width: 400px;
-  height: 150px; /* Adjusted to match the aspect ratio of 4 / 1.5 */
+  height: 150px; /* Height for the camera window */
   background-color: lightgrey;
   border: 2px solid green; /* Green outline */
   margin: 20px auto; /* Center the window */
@@ -50,17 +50,19 @@ h1 {
   font-size: 16px;
   font-weight: bold;
   border-radius: 5px; /* Optional: Rounded corners */
-  visibility: visible; /* Make sure it's visible initially */
+  visibility: visible; /* Ensure it's visible initially */
+  position: relative; /* Make it a positioning context for the video */
 }
 
+/* Style for the video to fill the container */
 video {
   width: 100%;
-  max-width: 400px; /* Limit the width for smaller screens */
-  height: auto;
-  aspect-ratio: 4 / 1.5; /* Set a wide aspect ratio for barcode scanning */
-  object-fit: cover; /* Ensures the video fills the container without distortion */
-  display: block;
-  margin: auto;
+  height: 100%; /* Ensure the video fills the entire window */
+  object-fit: cover; /* Ensure the video scales correctly within the window */
+  display: block; /* Remove any default inline behavior */
+  position: absolute; /* Position the video inside the window */
+  top: 0;
+  left: 0;
 }
 
 .title-line {
