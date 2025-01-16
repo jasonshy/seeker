@@ -35,6 +35,24 @@ h1 {
   z-index: 1000; /* Ensure it's above other elements */
 }
 
+/* Camera window styles */
+#camera-window {
+  width: 100%;
+  max-width: 400px;
+  height: 150px; /* Adjusted to match the aspect ratio of 4 / 1.5 */
+  background-color: lightgrey;
+  border: 2px solid green; /* Green outline */
+  margin: 20px auto; /* Center the window */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkgray;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px; /* Optional: Rounded corners */
+  visibility: visible; /* Make sure it's visible initially */
+}
+
 video {
   width: 100%;
   max-width: 400px; /* Limit the width for smaller screens */
@@ -84,3 +102,5 @@ video {
   background-color: lightgreen; /* Subtle color for separation */
   margin: 1.5px 0; /* Spacing around the line */
 }
+
+
