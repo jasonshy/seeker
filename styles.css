@@ -58,14 +58,14 @@ video {
 .navbar {
   display: flex;
   justify-content: flex-start; /* Align links to the left */
-  gap: 20px; /* Space between the links */
+  gap: 10px; /* Space between the links */
   margin: 0; /* Remove extra margin to bring the separator closer */
 }
 
 .nav-link {
   text-decoration: none; /* Remove underline */
   color: green; /* Match the green theme */
-  font-size: 16px; /* Adjust font size */
+  font-size: 12px; /* Adjust font size */
   font-weight: bold; /* Make the text bold */
   padding: 5px 10px; /* Add padding for clickable area */
   border-radius: 5px; /* Rounded corners for hover effect */
