@@ -6,6 +6,11 @@ body {
   background-color: #f4f4f4;
 }
 
+h1 {
+  margin-bottom: 0; /* Remove the bottom margin entirely */
+  padding-bottom: 5px; /* Optional: Add slight padding if you want some spacing */
+}
+
 #scanner-container {
   position: relative;
   display: inline-block;
@@ -54,7 +59,7 @@ video {
   display: flex;
   justify-content: flex-start; /* Align links to the left */
   gap: 20px; /* Space between the links */
-  margin: 10px 0; /* Add padding around the navbar */
+  margin: 10px 20px; /* Add padding around the navbar */
 }
 
 .nav-link {
