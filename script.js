@@ -56,4 +56,3 @@ function stopCamera(stream) {
   video.style.display = 'none'; // Hide the video once detection is done
   startCameraButton.style.display = 'block'; // Show the start button again
 }
-which line should I change?
