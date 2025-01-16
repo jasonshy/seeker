@@ -9,7 +9,6 @@ body {
 h1 {
   margin-bottom: 0; /* Remove the bottom margin entirely */
   color: green !important;
-  padding-bottom: 1.5px; /* Optional: Add slight padding if you want some spacing */
 }
 
 #scanner-container {
@@ -47,12 +46,12 @@ video {
 }
 
 .title-line {
-  width: 80%; /* Slightly shorter than the website width */
+  width: 70%; /* Slightly shorter than the website width */
   max-width: 600px; /* Optional: Limit the width for large screens */
   height: 2px; /* Thickness of the line */
   background-color: green; /* Green color for the line */
   box-shadow: 0 2px 5px lightgrey; /* Light grey shadow */
-  margin: 1.5px auto; /* Center the line and add spacing */
+  margin: 2px auto; /* Center the line and add spacing */
   border-radius: 1px; /* Optional: Rounded edges for a smooth look */
 }
 
