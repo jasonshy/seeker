@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  margin-bottom: 0; /* Remove the bottom margin entirely */
+  margin-bottom: 0;
   color: green !important;
 }
 
@@ -32,77 +32,75 @@ h1 {
   transform: translateX(-50%);
   padding: 10px 20px;
   font-size: 16px;
-  z-index: 1000; /* Ensure it's above other elements */
+  z-index: 1000;
 }
 
 /* Camera window styles */
 #camera-window {
   width: 100%;
   max-width: 400px;
-  height: 150px; /* Height for the camera window */
+  height: 150px;
   background-color: lightgrey;
-  border: 2px solid green; /* Green outline */
-  margin: 20px auto; /* Center the window */
+  border: 2px solid green;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   color: darkgray;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 5px; /* Optional: Rounded corners */
-  visibility: visible; /* Ensure it's visible initially */
-  position: relative; /* Make it a positioning context for the video */
+  border-radius: 5px;
+  visibility: visible;
+  position: relative;
 }
 
 /* Style for the video to fill the container */
 video {
   width: 100%;
-  height: 100%; /* Ensure the video fills the entire window */
-  object-fit: cover; /* Ensure the video scales correctly within the window */
-  display: block; /* Remove any default inline behavior */
-  position: absolute; /* Position the video inside the window */
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
+  visibility: hidden; /* Initially hide the video */
 }
 
 .title-line {
-  width: 70%; /* Slightly shorter than the website width */
-  max-width: 600px; /* Optional: Limit the width for large screens */
-  height: 2px; /* Thickness of the line */
-  background-color: green; /* Green color for the line */
-  box-shadow: 0 2px 5px lightgrey; /* Light grey shadow */
-  margin: 2px auto; /* Center the line and add spacing */
-  border-radius: 1px; /* Optional: Rounded edges for a smooth look */
+  width: 70%;
+  max-width: 600px;
+  height: 2px;
+  background-color: green;
+  box-shadow: 0 2px 5px lightgrey;
+  margin: 2px auto;
+  border-radius: 1px;
 }
 
 .navbar {
   display: flex;
-  justify-content: flex-start; /* Align links to the left */
-  gap: 10px; /* Space between the links */
-  margin: 0; /* Remove extra margin to bring the separator closer */
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0;
 }
 
 .nav-link {
-  text-decoration: none; /* Remove underline */
-  color: green; /* Match the green theme */
-  font-size: 12px; /* Adjust font size */
-  font-weight: bold; /* Make the text bold */
-  padding: 5px 10px; /* Add padding for clickable area */
-  border-radius: 5px; /* Rounded corners for hover effect */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  text-decoration: none;
+  color: green;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: green; /* Change background color on hover */
-  color: white; /* White text on hover */
+  background-color: green;
+  color: white;
 }
 
-/* Thin separator line under the navigation bar */
 .separator-line {
   width: 100%;
-  height: 1px; /* Very thin line */
-  background-color: lightgreen; /* Subtle color for separation */
-  margin: 1.5px 0; /* Spacing around the line */
+  height: 1px;
+  background-color: lightgreen;
+  margin: 1.5px 0;
 }
-
-
