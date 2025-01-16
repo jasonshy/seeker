@@ -32,6 +32,10 @@ body {
 
 video {
   width: 100%;
+  max-width: 400px; /* Limit the width for smaller screens */
   height: auto;
+  aspect-ratio: 4 / 1; /* Set a wide aspect ratio for barcode scanning */
+  object-fit: cover; /* Ensures the video fills the container without distortion */
   display: block;
+  margin: auto;
 }
