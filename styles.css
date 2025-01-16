@@ -39,3 +39,35 @@ video {
   display: block;
   margin: auto;
 }
+
+.title-line {
+  width: 80%; /* Slightly shorter than the website width */
+  max-width: 600px; /* Optional: Limit the width for large screens */
+  height: 4px; /* Thickness of the line */
+  background-color: green; /* Green color for the line */
+  box-shadow: 0 2px 5px lightgrey; /* Light grey shadow */
+  margin: 10px auto; /* Center the line and add spacing */
+  border-radius: 2px; /* Optional: Rounded edges for a smooth look */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  gap: 20px; /* Space between the links */
+  margin: 10px 0; /* Spacing above and below the navbar */
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline */
+  color: green; /* Match the green theme */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+  padding: 5px 10px; /* Add padding for clickable area */
+  border-radius: 5px; /* Rounded corners for hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-link:hover {
+  background-color: green; /* Change background color on hover */
+  color: white; /* White text on hover */
+}
