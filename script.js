@@ -9,7 +9,12 @@ startCameraButton.addEventListener('click', async () => {
       video: { facingMode: 'environment' },
     });
     video.srcObject = stream;
-    video.style.display = 'block';
+
+    // Hide the grey camera window and show the video
+    cameraWindow.style.visibility = 'hidden';
+    video.style.visibility = 'visible';
+    
+    //video.style.display = 'block';
     startCameraButton.style.display = 'none'; // Hide the button after starting the camera
 
     // Start barcode detection
