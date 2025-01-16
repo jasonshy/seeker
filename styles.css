@@ -46,7 +46,7 @@ video {
   height: 2px; /* Thickness of the line */
   background-color: green; /* Green color for the line */
   box-shadow: 0 2px 5px lightgrey; /* Light grey shadow */
-  margin: 5px auto; /* Center the line and add spacing */
+  margin: 3px auto; /* Center the line and add spacing */
   border-radius: 1px; /* Optional: Rounded edges for a smooth look */
 }
 
