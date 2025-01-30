@@ -2,8 +2,8 @@
 work in progress, haven't finished.
 
 Two reasons for building this program
-    1. The grocery store I'm working at doesn't have enough scanners for every employee to check where an item belongs.
-    2. The item scanner doesn't allow us to locate items by using text.
+1. The grocery store I'm working at doesn't have enough scanners for every employee to check where an item belongs.
+2. The item scanner doesn't allow us to locate items by using text.
 
 
 This project is about building a website that everyone can visit to search for items by name/brand at FreshCo (Whitehorn) from a database on Azure.
