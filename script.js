@@ -12,15 +12,16 @@ startCameraButton.addEventListener('click', async () => {
     video.srcObject = stream;
 
     // Hide the grey camera window and show the video
-    cameraWindow.style.visibility = 'hidden';
-    video.style.visibility = 'visible';
+    video.style.visibility = 'visible'; // Make video visible inside the window
+    video.style.position = 'absolute'; // Position it correctly inside the window
+    cameraWindow.style.visibility = 'visible'; // Make sure the border stays visible
 
     startCameraButton.style.display = 'none'; // Hide the button after starting the camera
 
     // Start barcode detection
     codeReader.decodeOnceFromVideoDevice(undefined, 'video')
       .then((result) => {
-        barcodeResult.textContent = `Barcode Detected: ${result.text}`;
+        document.getElementById('barcode-upc').textContent = `UPC: ${result.text}`;
         fetchProductDetails(result.text); // Call the new function with the detected barcode
         stopCamera(stream);
       })
@@ -44,13 +45,17 @@ async function fetchProductDetails(barcode) {
     if (data.status === 1) {
       const productName = data.product.product_name || 'Unknown Product';
       const productBrand = data.product.brands || 'Unknown Brand';
-      barcodeResult.textContent = `Product: ${productName}, Brand: ${productBrand}`;
+      // Update the next two lines
+      document.getElementById('product-name').textContent = `Product: ${productName}`;
+      document.getElementById('product-brand').textContent = `Brand: ${productBrand}`;
     } else {
-      barcodeResult.textContent = 'Product not found in OpenFoodFacts';
+      document.getElementById('product-name').textContent = 'Product not found in OpenFoodFacts';
+      document.getElementById('product-brand').textContent = '';
     }
   } catch (error) {
     console.error('Error fetching product details:', error);
-    barcodeResult.textContent = 'Error fetching product details';
+    document.getElementById('product-name').textContent = 'Error fetching product details';
+    document.getElementById('product-brand').textContent = '';
   }
 }
 
