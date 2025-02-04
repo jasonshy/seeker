@@ -67,3 +67,49 @@ function stopCamera(stream) {
   cameraWindow.style.visibility = 'visible'; // Show the camera window again
   startCameraButton.style.display = 'block'; // Show the start button again
 }
+
+// Aisle buttons
+document.querySelectorAll(".aisle-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        // Remove "selected" class from all aisle buttons first
+        document.querySelectorAll(".aisle-btn").forEach(btn => btn.classList.remove("selected"));
+        
+        // Add "selected" class to the clicked button
+        button.classList.add("selected");
+    });
+});
+
+// Side buttons
+document.querySelectorAll(".side-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        // Remove "selected" class from all aisle buttons first
+        document.querySelectorAll(".side-btn").forEach(btn => btn.classList.remove("selected"));
+        
+        // Add "selected" class to the clicked button
+        button.classList.add("selected");
+    });
+});
+
+
+// Rack buttons
+document.querySelectorAll(".rack-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        // Remove "selected" class from all rack buttons first
+        document.querySelectorAll(".rack-btn").forEach(btn => btn.classList.remove("selected"));
+        
+        // Add "selected" class to the clicked button
+        button.classList.add("selected");
+    });
+});
+
+// Level buttons
+document.querySelectorAll(".level-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        // Remove "selected" class from all level buttons first
+        document.querySelectorAll(".level-btn").forEach(btn => btn.classList.remove("selected"));
+        
+        // Add "selected" class to the clicked button
+        button.classList.add("selected");
+    });
+});
+
