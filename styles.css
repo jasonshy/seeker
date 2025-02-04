@@ -20,7 +20,7 @@ h1 {
 }
 
 
-#barcode-upc, #product-name, #product-brand {
+#barcode-upc, #product-name, #product-brand, #product-aisle, #product-side, #product-rack, #product-level {
   width: 100%; /* Ensure lines take full width */
   margin: 5px 0; /* Add spacing between each line */
   text-align: left; /* Align text to the left */
@@ -113,4 +113,50 @@ video {
   height: 1px; /* Very thin line */
   background-color: lightgreen; /* Subtle color for separation */
   margin: 1.5px 0; /* Spacing around the line */
+}
+
+/* Container for buttons to ensure they align in one row */
+#aisle-buttons, #rack-buttons, #level-buttons {
+    display: flex;
+    flex-wrap: wrap;  /* Allow buttons to wrap to the next line if needed */
+    justify-content: space-between;  /* Distribute buttons evenly */
+    gap: 5px;  /* Space between buttons */
+    max-width: 100%;  /* Ensure buttons do not exceed the container's width */
+}
+
+/* Container for buttons to ensure they align in one row */
+#aisle-buttons, #rack-buttons, #level-buttons, #.side-btn {
+    display: flex;
+    flex-wrap: wrap;  /* Allow buttons to wrap to the next line if needed */
+    justify-content: space-between;  /* Distribute buttons evenly */
+    gap: 5px;  /* Space between buttons */
+    max-width: 100%;  /* Ensure buttons do not exceed the container's width */
+}
+
+/* General button style for all buttons */
+.aisle-btn, .side-btn, .rack-btn, .level-btn {
+    width: 40px;  /* Set a fixed width for all buttons */
+    height: 40px; /* Adjust height to match the width */
+    font-size: 12px;  /* Adjust font size */
+    cursor: pointer;
+    border: 1px solid green;
+    background-color: white;
+    color: green;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;  /* Includes padding and border in width calculation */
+}
+
+/* Hover effect for buttons */
+.aisle-btn:hover, .rack-btn:hover, .level-btn:hover, .side-btn:hover {
+    background-color: green;
+    color: white;
+}
+
+/* Selected button style */
+.aisle-btn.selected, .rack-btn.selected, .level-btn.selected, .side-btn.selected {
+    background-color: green;
+    color: white;
+    font-weight: bold;
 }
