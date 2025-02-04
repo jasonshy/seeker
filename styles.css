@@ -24,7 +24,7 @@ h1 {
   width: 100%; /* Ensure lines take full width */
   margin: 5px 0; /* Add spacing between each line */
   text-align: left; /* Align text to the left */
-  font-size: 16px; /* Adjust font size for better visibility */
+  font-size: 10px; /* Adjust font size for better visibility */
   color: green; /* Set text color to green */
 
 }
@@ -135,9 +135,9 @@ video {
 
 /* General button style for all buttons */
 .aisle-btn, .side-btn, .rack-btn, .level-btn {
-    width: 40px;  /* Set a fixed width for all buttons */
-    height: 40px; /* Adjust height to match the width */
-    font-size: 12px;  /* Adjust font size */
+    width: 35px;  /* Set a fixed width for all buttons */
+    height: 25px; /* Adjust height to match the width */
+    font-size: 10px;  /* Adjust font size */
     cursor: pointer;
     border: 1px solid green;
     background-color: white;
