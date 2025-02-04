@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barcode Scanner</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+  <h1>Item Finder</h1>
+  <div class="title-line"></div>
+  <nav class="navbar">
+    <a href="#" class="nav-link">About Me</a>
+    <a href="#" class="nav-link">Search</a>
+    <a href="login.html" class="nav-link">Edit</a>
+  </nav>
+  <div class="separator-line"></div>
+
+  <!-- Camera window before activation -->
+  <div id="camera-window">
+    <video id="video" autoplay></video> <!-- Video element inside the camera window -->
+  </div>
+
+  <button id="start-camera-btn">Activate Camera</button>
+
+  <div id="scanner-container">
+    <p id="barcode-upc">UPC: </p>  <!-- Default UPC line -->
+    <p id="product-name">Product: </p> <!-- Default Product line -->
+    <p id="product-brand">Brand: </p> <!-- Default Brand line -->
+
+    <!-- Aisles 0 - 8 -->
+    <p id="product-aisle">Aisle: 
+        <span id="aisle-buttons">
+            <button class="aisle-btn" data-value="0">0</button>
+            <button class="aisle-btn" data-value="1">1</button>
+            <button class="aisle-btn" data-value="2">2</button>
+            <button class="aisle-btn" data-value="3">3</button>
+            <button class="aisle-btn" data-value="4">4</button>
+            <button class="aisle-btn" data-value="5">5</button>
+            <button class="aisle-btn" data-value="6">6</button>
+            <button class="aisle-btn" data-value="7">7</button>
+            <button class="aisle-btn" data-value="8">8</button>
+        </span>
+    </p>
+
+    <p id="product-side">Side: <br>
+        <span id="side-buttons">
+            <button class="side-btn" data-value="Left">Left</button>
+            <button class="side-btn" data-value="Right">Right</button>
+        </span>
+    </p>
+
+    <p id="product-rack">Rack: <!-- New Rack line -->
+        <span id="rack-buttons">
+            <button class="rack-btn" data-value="1">1</button>
+            <button class="rack-btn" data-value="2">2</button>
+            <button class="rack-btn" data-value="3">3</button>
+            <button class="rack-btn" data-value="4">4</button>
+            <button class="rack-btn" data-value="5">5</button>
+            <button class="rack-btn" data-value="6">6</button>
+            <button class="rack-btn" data-value="7">7</button>
+            <button class="rack-btn" data-value="8">8</button>
+            <button class="rack-btn" data-value="9">9</button>
+            <button class="rack-btn" data-value="10">10</button>
+            <button class="rack-btn" data-value="11">11</button>
+            <button class="rack-btn" data-value="12">12</button>
+            <button class="rack-btn" data-value="13">13</button>
+            <button class="rack-btn" data-value="14">14</button>
+            <button class="rack-btn" data-value="15">15</button>
+            <button class="rack-btn" data-value="16">16</button>
+            <button class="rack-btn" data-value="17">17</button>
+            <button class="rack-btn" data-value="18">18</button>
+        </span>
+    </p>
+
+    <p id="product-level">Level:  <!-- New Level line -->
+        <span id="level-buttons">
+            <button class="level-btn" data-value="1">1</button>
+            <button class="level-btn" data-value="2">2</button>
+            <button class="level-btn" data-value="3">3</button>
+            <button class="level-btn" data-value="4">4</button>
+            <button class="level-btn" data-value="5">5</button>
+            <button class="level-btn" data-value="6">6</button>
+        </span>
+    </p>
+
+  </div>
+
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
