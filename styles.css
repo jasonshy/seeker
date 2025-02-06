@@ -134,7 +134,7 @@ video {
 }
 
 /* General button style for all buttons */
-.aisle-btn, .side-btn, .rack-btn, .level-btn {
+.aisle-btn, .side-btn, .rack-btn, .level-btn, .delete-btn {
     width: 35px;  /* Set a fixed width for all buttons */
     height: 25px; /* Adjust height to match the width */
     font-size: 10px;  /* Adjust font size */
@@ -149,13 +149,13 @@ video {
 }
 
 /* Hover effect for buttons */
-.aisle-btn:hover, .rack-btn:hover, .level-btn:hover, .side-btn:hover {
+.aisle-btn:hover, .rack-btn:hover, .level-btn:hover, .side-btn:hover, .delete-btn:hover {
     background-color: green;
     color: white;
 }
 
 /* Selected button style */
-.aisle-btn.selected, .rack-btn.selected, .level-btn.selected, .side-btn.selected {
+.aisle-btn.selected, .rack-btn.selected, .level-btn.selected, .side-btn.selected, .expand-btn.selected {
     background-color: green;
     color: white;
     font-weight: bold;
@@ -208,8 +208,59 @@ video {
 
 /* Ensure table is wider than buttons and camera */
 #scanned-items-table {
-    width: 90%;  
+    width: 80%;  
     max-width: 500px;
     margin: auto;
 }
 
+#table-container {
+  max-height: 250px; /* Set a max height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-bottom: 80px; /* Ensure table doesn't overlap the button */
+  border: 1px solid green; /* Optional: Adds a border around the table */
+  width: 100%;
+  max-width: 400px; /* Prevent table from stretching too wide */
+}
+
+/* Ensure table takes full width of its container */
+#scanned-items-table {
+  width: 100%;
+  border-collapse: collapse; /* Reduce extra spacing */
+  table-layout: fixed; /* Prevent horizontal scrolling */
+}
+
+/* Adjust column widths */
+#scanned-items-table th:nth-child(1), #scanned-items-table td:nth-child(1) {
+  width: 50%; /* UPC gets more space */
+}
+
+#scanned-items-table th, #scanned-items-table td {
+  width: 12.5%; /* Keep other columns short */
+  padding: 4px; /* Reduce padding for tighter rows */
+  text-align: center;
+  border-bottom: 1px solid green;
+  font-size: 12px; /* Make text slightly smaller */
+}
+
+/* Prevent inputs from stretching too much */
+#scanned-items-table input {
+  width: 100%;
+  font-size: 12px; /* Adjust font size to save space */
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+/* Optional: Style scrollbar */
+#table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+#table-container::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 4px;
+}
+
+#table-container::-webkit-scrollbar-track {
+  background: lightgray;
+}
