@@ -2,13 +2,17 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   background-color: #f4f4f4;
+  height: 100vh; /* Take up the full height of the screen */
+  overflow: hidden; /* Prevent the whole page from scrolling */
 }
 
 h1 {
   margin-bottom: 0; /* Remove the bottom margin entirely */
   color: green !important;
+  font-size: 20px; /* Adjust the font size if needed */
+
 }
 
 #scanner-container {
@@ -53,6 +57,7 @@ h1 {
   background-color: transparent;
   border: 2px solid green; /* Green outline */
   margin: 20px auto; /* Center the window */
+  margin-top: 10px; /* Decrease the space between title and camera window */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,8 +175,8 @@ video {
   color: white; /* White text */
   border: none;
   border-radius: 5px; /* Rounded corners */
-  padding: 10px 20px; /* Add some padding */
-  font-size: 16px; /* Adjust font size */
+  padding: 10px 10px; /* Add some padding */
+  font-size: 10px; /* Adjust font size */
   cursor: pointer;
   display: flex; /* Align the arrow and text side by side */
   align-items: center; /* Vertically center content */
@@ -214,7 +219,7 @@ video {
 }
 
 #table-container {
-  max-height: 250px; /* Set a max height for scrolling */
+  max-height: 100px; /* Set a max height for scrolling */
   overflow-y: auto; /* Enable vertical scrolling */
   margin-bottom: 80px; /* Ensure table doesn't overlap the button */
   border: 1px solid green; /* Optional: Adds a border around the table */
@@ -224,6 +229,7 @@ video {
 
 /* Ensure table takes full width of its container */
 #scanned-items-table {
+  max-height: 40px;  /* Set a fixed height for the table */
   width: 100%;
   border-collapse: collapse; /* Reduce extra spacing */
   table-layout: fixed; /* Prevent horizontal scrolling */
