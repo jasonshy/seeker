@@ -25,7 +25,10 @@
     <video id="video" autoplay></video> <!-- Video element inside the camera window -->
   </div>
 
+<div id="button-container">
   <button id="start-camera-btn">Activate Camera</button>
+</div>
+
 
   <div id="scanner-container">
     <p id="barcode-upc">UPC: </p>  <!-- Default UPC line -->
@@ -96,22 +99,24 @@
 </button>
 
 <!-- Table for displaying scanned items -->
-<table id="scanned-items-table" style="display: none;">
-  <thead>
-    <tr>
-      <th>UPC</th>
-      <th>Aisle</th>
-      <th>Side</th>
-      <th>Rack</th>
-      <th>Level</th>
-    </tr>
-  </thead>
-  <tbody id="scanned-items-body">
-    <!-- Scanned items will be appended here -->
-  </tbody>
-</table>
+<div id="table-container">
+  <table id="scanned-items-table" style="display: none;">
+    <thead>
+      <tr>
+        <th>UPC</th>
+        <th>Aisle</th>
+        <th>Side</th>
+        <th>Rack</th>
+        <th>Level</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="scanned-items-body">
+      <!-- Scanned items will be appended here -->
+    </tbody>
+  </table>
+</div>
 
-  </div>
 
   <script src="https://unpkg.com/@zxing/library@latest"></script>
   <script src="script.js"></script>
