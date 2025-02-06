@@ -191,3 +191,25 @@ video {
 .expand-btn:active .expand-arrow {
   transform: rotate(180deg); /* Rotate arrow when the button is clicked */
 }
+
+/* Adjust UPC input field to take more space */
+#scanned-items-table td:first-child input {
+    width: 150px; /* Increase width for UPC */
+    font-size: 12px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Adjust other input fields to be smaller */
+#scanned-items-table td:not(:first-child) input {
+    width: 50px;  /* Smaller width for Aisle, Side, Rack, Level */
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Ensure table is wider than buttons and camera */
+#scanned-items-table {
+    width: 90%;  
+    max-width: 500px;
+    margin: auto;
+}
+
