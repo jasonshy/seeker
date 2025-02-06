@@ -88,6 +88,31 @@
         </span>
     </p>
 
+
+<!-- This button will expand/collapse the table -->
+<button id="expand-btn" class="expand-btn">
+  <span class="expand-arrow">&#x2193;</span> <!-- Downward arrow -->
+  Show Scanned Items
+</button>
+
+<!-- Table for displaying scanned items -->
+<table id="scanned-items-table" style="display: none;">
+  <thead>
+    <tr>
+      <th>UPC</th>
+      <th>Product Name</th>
+      <th>Brand</th>
+      <th>Aisle</th>
+      <th>Side</th>
+      <th>Rack</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody id="scanned-items-body">
+    <!-- Scanned items will be appended here -->
+  </tbody>
+</table>
+
   </div>
 
   <script src="https://unpkg.com/@zxing/library@latest"></script>
