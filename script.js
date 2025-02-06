@@ -42,6 +42,18 @@ function addScannedItemToTable(upc) {
   row.appendChild(createCell(rack)); // Rack
   row.appendChild(createCell(level)); // Level
 
+  // Add Delete Button
+  const deleteCell = document.createElement('td');
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = "X";
+  deleteBtn.classList.add("delete-btn");
+  deleteBtn.addEventListener("click", () => {
+    row.remove(); // Remove the row from the table
+  });
+
+  deleteCell.appendChild(deleteBtn);
+  row.appendChild(deleteCell);
+
   // Append the new row to the table body
   tbody.appendChild(row);
 }
