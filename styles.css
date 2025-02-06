@@ -160,3 +160,34 @@ video {
     color: white;
     font-weight: bold;
 }
+
+
+
+
+/* Style the expand button */
+.expand-btn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer;
+  display: flex; /* Align the arrow and text side by side */
+  align-items: center; /* Vertically center content */
+  gap: 10px; /* Space between arrow and text */
+}
+
+.expand-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.expand-arrow {
+  font-size: 18px; /* Make the arrow slightly larger */
+  transform: rotate(0deg); /* Initial rotation of the arrow */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.expand-btn:active .expand-arrow {
+  transform: rotate(180deg); /* Rotate arrow when the button is clicked */
+}
